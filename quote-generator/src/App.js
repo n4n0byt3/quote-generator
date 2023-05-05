@@ -48,7 +48,8 @@ function SharePage({ quote }) {
 
   function shareOnInstagram() {
     const igText = encodeURIComponent(`"${quote.text}" - ${quote.author}`);
-    const igUrl = `https://www.instagram.com/create/story/${igText}`;
+    const igUrl = `https://www.instagram.com/?url=${igText}`;
+    window.alert('You will be redirected to the Instagram website to share the quote.');
     window.open(igUrl, "_blank", "noopener,noreferrer");
   }
 
